@@ -1,0 +1,19 @@
+CustomerID,Date,Amount,Category,PaymentMethod,Anomaly
+1001,2025-03-01,500,Electricity,Credit Card,Normal
+1002,2025-03-01,2000,Shopping,UPI,Normal
+1003,2025-03-02,1500,Internet,Debit Card,Normal
+1004,2025-03-02,400,Groceries,Cash,Normal
+1005,2025-03-03,800,Water Bill,Credit Card,Normal
+1006,2025-03-03,300,Electricity,UPI,Normal
+1007,2025-03-04,4500,Shopping,Credit Card,Normal
+1008,2025-03-04,1000,Internet,Debit Card,Normal
+1009,2025-03-05,350,Groceries,Cash,Normal
+1010,2025-03-05,2500,Electricity,Credit Card,Normal
+1011,2025-03-06,5000,Internet,Credit Card,Normal
+1012,2025-03-06,6000,Shopping,UPI,Normal
+1013,2025-03-07,200,Water Bill,Debit Card,Normal
+1014,2025-03-07,150,Electricity,UPI,Normal
+1015,2025-03-08,7500,Shopping,Credit Card,Bill Shock
+1016,2025-03-08,800,Internet,Debit Card,Normal
+1017,2025-03-09,900,Groceries,Cash,Normal
+1018,2025-03-09,10000,Electricity,Credit Card,Bill Shock
