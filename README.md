@@ -1,8 +1,10 @@
-# 🚀 Bill Shock Detector - AI-Powered Anomaly Detection
+#  Bill Shock Detector - AI-Powered Anomaly Detection  
 
-An AI-driven **Bill Shock Detector** that identifies unusual spending patterns using **Isolation Forests**. This project is designed for **financial analysts, consultants, and businesses** to detect unexpected billing anomalies.
+An AI-driven **Bill Shock Detector** that identifies unusual spending patterns using **Isolation Forests**. This project is designed for **financial analysts, consultants, and businesses** to detect unexpected billing anomalies.  
 
-## 📌 Features
+---
+
+##  Features  
 ✅ **Anomaly Detection**: Identifies bill shocks based on transaction history.  
 ✅ **Machine Learning**: Uses `IsolationForest` for anomaly detection.  
 ✅ **Customizable**: Works with any transaction dataset.  
@@ -10,74 +12,91 @@ An AI-driven **Bill Shock Detector** that identifies unusual spending patterns u
 
 ---
 
-## 🛠️ Tech Stack
-- **Python** (Data Processing & Model)
-- **scikit-learn** (`IsolationForest` for anomaly detection)
-- **pandas** (Data Handling)
-- **joblib** (Model Saving & Loading)
+##  Tech Stack  
+- **Python** (Data Processing & Model)  
+- **scikit-learn** (`IsolationForest` for anomaly detection)  
+- **pandas** (Data Handling)  
+- **joblib** (Model Saving & Loading)  
 
 ---
 
-## 🚀 Quick Start
-
-### 1️⃣ **Clone the Repository**
+### 1. Clone the Repository  
 ```sh
-git clone https://github.com/YOUR_USERNAME/Bill-Shock-Detector.git
-cd Bill-Shock-Detector
+git clone https://github.com/YOUR_USERNAME/Bill-Shock-Detector.git  
+cd Bill-Shock-Detector  
+```
 
-2️⃣ Install Dependencies
-Ensure you have Python 3.8+ installed, then run:
+### 2. Install Dependencies  
+Ensure you have Python 3.8+ installed, then run:  
+```sh
+pip install -r requirements.txt  
+```
 
-pip install -r requirements.txt
+### 3. Prepare Your Data  
+Add your transaction data to:  
+```sh
+data/transactions.csv  
+```
+ **Ensure your CSV has an "Amount" column.**  
 
-3️⃣ Prepare Your Data
-Add your transaction data to:
+### 4. Train the Model  
+Run the following command:  
+```sh
+python utils/anomaly_detection.py  
+```
+✅ This will generate a trained model at:  
+```sh
+models/anomaly_model.pkl  
+```
 
-data/transactions.csv
-📌 Ensure your CSV has an "Amount" column.
+### 5. Detect Anomalies  
+Use the function in your script:  
+```python
+import pandas as pd  
+from utils.anomaly_detection import detect_anomalies  
 
-4️⃣ Train the Model
-Run the following command:
+df = pd.read_csv("data/transactions.csv")  
+anomalies = detect_anomalies(df)  
+print(anomalies)  
+```
 
-python utils/anomaly_detection.py
-✅ This will generate a trained model at: models/anomaly_model.pkl.
+📊 **Example Output:**  
+```
+    ID   Amount  Anomaly  
+3  104  7500.0  Bill Shock  
+7  202  9900.0  Bill Shock  
+```
 
-5️⃣ Detect Anomalies
-Use the function in your script:
+---
 
-import pandas as pd
-from utils.anomaly_detection import detect_anomalies
+## 📂 Project Structure  
+```
+📦 Bill-Shock-Detector  
+ ┣ 📂 data  
+ ┃ ┗ 📜 transactions.csv  # Sample Transaction Data  
+ ┣ 📂 models  
+ ┃ ┗ 📜 anomaly_model.pkl  # Saved ML Model  
+ ┣ 📂 utils  
+ ┃ ┗ 📜 anomaly_detection.py  # Core ML Logic  
+ ┣ 📜 README.md  # Project Documentation  
+ ┣ 📜 requirements.txt  # Dependencies  
+```
 
-df = pd.read_csv("data/transactions.csv")
-anomalies = detect_anomalies(df)
-print(anomalies)
-📊 Example Output
+---
 
-    ID   Amount  Anomaly
-3  104  7500.0  Bill Shock
-7  202  9900.0  Bill Shock
-📂 Project Structure
+##  Future Enhancements  
+- Support for user-uploaded CSV files  
+- Deployment on Streamlit Cloud  
 
-📦 Bill-Shock-Detector
- ┣ 📂 data
- ┃ ┗ 📜 transactions.csv  # Sample Transaction Data
- ┣ 📂 models
- ┃ ┗ 📜 anomaly_model.pkl  # Saved ML Model
- ┣ 📂 utils
- ┃ ┗ 📜 anomaly_detection.py  # Core ML Logic
- ┣ 📜 README.md  # Project Documentation
- ┣ 📜 requirements.txt  # Dependencies
+---
 
-📌 Future Enhancements
-Support for user-uploaded CSV files
-Deployment on Streamlit Cloud
+## 🤝 Contributing  
+Feel free to fork, contribute, and submit PRs. For major changes, open an issue first.  
 
+---
 
-🤝 Contributing
-Feel free to fork, contribute, and submit PRs. For major changes, open an issue first.
+## 🏆 Why This Project?  
+This AI-powered financial tool can be used by consulting firms, financial analysts, and businesses to detect anomalies in customer transactions, prevent fraud, and optimize cost management.  
 
-🏆 Why This Project?
-This AI-powered financial tool can be used by consulting firms, financial analysts, and businesses to detect anomalies in customer transactions, prevent fraud, and optimize cost management.
-
-🚀 Let's make finance smarter with AI!
-📩 Reach out if you have any questions!
+ **Let's make finance smarter with AI!**  
+📩 **Reach out if you have any questions!**
